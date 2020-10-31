@@ -11,8 +11,10 @@ public class AppRunner {
 
     public static void main(String[] args) {
         AccountService accountService = new AccountService("account.properties");
-        System.out.println(accountService.getClientId());
         GeoService geoService = new GeoService(accountService);
+
+        geoService.getLocation("의정부");
+
 
     }
 }
